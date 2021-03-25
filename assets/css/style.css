@@ -1,6 +1,5 @@
 .debug{
   background-color: rgba(225,190,231 ,0.3);
-  border: 1px solid rgba(171,71,188 ,1);
 }
 
 /* GENERAL */
@@ -35,14 +34,14 @@ body {
 /* QUELLO CHE TIENE TUTTO */
 .big-box{
   width: 100%;
-  height: 1200px;
+  height: fit-content;
   display: flex;
 }
 
 /* MENU LATERALE */
 .menu-lat{
   width: 15%;
-  height: 1200px;
+  height: 850px;
   background-color: rgba(240,98,146 ,0.5);
 }
 
@@ -64,7 +63,7 @@ body {
 }
 
 .menu-lat .menu-foto img{
-  width: 50px;
+  width: 40px;
 }
 
 /* navmenu */
@@ -80,6 +79,25 @@ body {
   text-transform: uppercase;
 }
 
+.grey-bg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: grey;
+}
+
+.grey-bg .fa-plus {
+  color: black;
+  size: 5px;
+}
+
+.add-play{
+  display: flex;
+  align-items: center;
+}
+
 .new-play ul{
   list-style: none;
 }
@@ -90,17 +108,44 @@ body {
 
 /* PARTE CON GLI ALBUM */
 /* upgrade */
+.home{
+  width: 85%;
+  height: fit-content;
+  background-color: rgba(186,104,200 ,0.5);
+}
+
 .upgrade{
   width: 100%;
-  height: 50px;
+  height: 100px;
   background-color: rgba(66,66,66 ,0.5);
   position: fixed;
   z-index: 9999;
 }
-.home{
-  width: 85%;
-  height: 1200px;
-  background-color: rgba(186,104,200 ,0.5);
+
+.nav-bar{
+  height: 50px;
+  margin-top: 120px;
+  margin-bottom: 30px;
+  background-color: rgba(128,203,196 ,0.5);
+}
+
+.nav-bar ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav-bar ul li{
+  display: inline-block;
+  text-transform: uppercase;
+  padding-right: 20px;
+}
+
+.recently-played, .created-for, .popular-arts{
+  height: 225px;
+  background-color: rgba(174,213,129 ,0.7);
+  margin-bottom: 15px;
 }
 
 /* FOOTER */
