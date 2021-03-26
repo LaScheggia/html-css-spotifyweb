@@ -74,11 +74,19 @@ main .nav-logo img{
 /* mini menu navigaz */
 main .home-menu{
   padding-bottom: 20px;
-  background-color: rgba(225,190,231 ,1);
 }
 
 main .home-menu img{
   width: 35px;
+}
+
+main .home-menu a{
+  text-decoration: none;
+  color: white;
+}
+
+main .home-menu a:hover{
+  font-weight: bold;
 }
 
 main .home, .find, .library {
@@ -118,6 +126,15 @@ main .home, .find, .library {
   padding: 10px 0;
 }
 
+.name-playlists ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+.name-playlists ul li a:hover{
+  font-weight: bold;
+}
 
 /* parte attaccata cons x stocazzo */
 main .main-nav .nav-bottom {
@@ -158,7 +175,6 @@ main .main-nav .nav-bottom {
   width: 20px;
 }
 
-
 /* parte centrale */
 main #content {
   float: left;
@@ -197,7 +213,7 @@ main #content .call-to-action a{
 /* lista pseudo navbar */
 .nav-bar{
   height: 50px;
-  margin-top: 120px;
+  margin-top: 100px;
   margin-bottom: 30px;
   display: flex;
   align-items: center;
@@ -205,7 +221,7 @@ main #content .call-to-action a{
   background-color: rgba(244,143,177 ,0.5);
 }
 
-.nav-bar ul{
+.content .nav-bar ul{
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -217,15 +233,25 @@ main #content .call-to-action a{
   padding-right: 20px;
 }
 
+.nav-bar ul li a{
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-bar ul li a:hover{
+  font-weight: bold;
+}
+
 /* covers */
 .recently-played, .created-for, .popular-arts{
-  height: 225px;
+  height: 255px;
   background-color: rgba(174,213,129 ,0.7);
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .recently-played{
-  margin-top: 200px;
+  margin-top: 50px;
 }
 
 
