@@ -159,7 +159,7 @@ main .main-nav .nav-bottom {
 }
 
 
-/* content */
+/* parte centrale */
 main #content {
   float: left;
   height: 100%;
@@ -169,11 +169,12 @@ main #content {
   overflow-y: auto;
 }
 
+/* effettua upgrade */
 main #content .call-to-action {
   position: fixed;
   width: calc(100% - 230px);
   height: 90px;
-  background-color: rgba(97,97,97 ,0.4);
+  background-color: rgb(8, 11, 18);
 }
 
 main #content .call-to-action .upgrade{
@@ -182,12 +183,50 @@ main #content .call-to-action .upgrade{
   border: 1px solid white;
   background-color: transparent;
   width: fit-content;
+  float: right;
+  margin-top: 20px;
 }
 
 main #content .call-to-action a{
-  
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
 }
 
+/* lista pseudo navbar */
+.nav-bar{
+  height: 50px;
+  margin-top: 120px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(244,143,177 ,0.5);
+}
+
+.nav-bar ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.nav-bar ul li{
+  display: inline-block;
+  text-transform: uppercase;
+  padding-right: 20px;
+}
+
+/* covers */
+.recently-played, .created-for, .popular-arts{
+  height: 225px;
+  background-color: rgba(174,213,129 ,0.7);
+  margin-bottom: 15px;
+}
+
+.recently-played{
+  margin-top: 200px;
+}
 
 
 /* footer */
