@@ -41,13 +41,11 @@ main{
 
 
 /* MENU LATERALE */
-.menu-lat{
-  width: 230px;
-  height: 100%;
-}
+
 
 /* logo */
 .menu-lat{
+  width: 230px;
   height: calc(100% - 80px);
   padding-left: 10px;
   padding-right: 10px;
