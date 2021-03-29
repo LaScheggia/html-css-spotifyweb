@@ -78,6 +78,12 @@ main .home-menu{
   padding-bottom: 20px;
 }
 
+main .home-menu .home{
+  border-left: 3px solid greenyellow;
+}
+
+
+
 main .home-menu img{
   width: 35px;
 }
@@ -108,6 +114,15 @@ main .home, .find, .library {
   display: flex;
   align-items: center;
 }
+.add-play a{
+  text-decoration: none;
+  color: white;
+}
+
+.add-play a:hover{
+  font-weight: bold;
+}
+
 
 /* bottoncino add */
 .grey-bg{
@@ -267,17 +282,14 @@ main #content .call-to-action a{
 
 .recently-played .albums img{
   width: 100%;
-  height: 200px;
 }
 
 .albums .author{
   display: flex;
-  width: 100%;
 }
 
 .albums .author .song-name{
-  
-  height: 100%;
+  flex: 1;
 }
 
 /* footer */
@@ -381,6 +393,7 @@ footer #player {
 
 /* smol */
 @media (min-width: 600px) and (max-width: 768px){
+
   .recently-played .albums{
     width: calc(100% / 2);
     height: fit-content;
@@ -404,6 +417,26 @@ footer #player {
   main #content, main #content .call-to-action {
     width: calc(100% - 50px);
   }
+
+  main .create-play{
+    display: none;
+  }
+
+  main .name-playlists{
+    display: none;
+  }
+
+  main .nav-bottom{
+    display: none;
+  }
+
+  main .home-menu a{
+    display: none;
+  }
+
+
+
+
 
   .recently-played .albums{
     width: calc(100% / 2);
