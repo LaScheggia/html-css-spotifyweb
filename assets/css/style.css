@@ -53,10 +53,10 @@ main::after {
 
 /* nav sx */
 main .main-nav {
+  padding-left: 5px;
   float: left;
   width: 230px;
   height: 100%;
-  padding: 10px;
   background-color: black;
 }
 
@@ -81,8 +81,6 @@ main .home-menu{
 main .home-menu .home{
   border-left: 3px solid greenyellow;
 }
-
-
 
 main .home-menu img{
   width: 35px;
@@ -123,7 +121,6 @@ main .home, .find, .library {
   font-weight: bold;
 }
 
-
 /* bottoncino add */
 .grey-bg{
   display: flex;
@@ -132,12 +129,14 @@ main .home, .find, .library {
   width: 40px;
   height: 40px;
   background-color: grey;
+  color: black;
+  font-size: 22px;
 }
 
 /* playlists */
 .name-playlists{
   overflow-y: auto;
-  height: 60%;
+  height: calc(100vh - 400px);
 }
 
 .name-playlists ul{
@@ -163,8 +162,9 @@ main .main-nav .nav-bottom {
   height: 80px;
   color: gray;
   width: 210px;
+  padding: 0 5px;
   position: fixed;
-  z-index: 9999;
+  z-index: 99;
   background-color: black;
 }
 
@@ -283,10 +283,12 @@ main #content .call-to-action a{
 .created-for h6,
 .popular-arts h6{
   margin-bottom: 15px;
+  color: grey;
 }
 
 .covers p{
   font-size: 12px;
+  color: grey;
 }
 
 .covers .albums{
@@ -304,10 +306,26 @@ main #content .call-to-action a{
   border-radius: 50%;
 }
 
+.overlay{
+  display: none;
+  text-align: center;
+}
+
+.albums:hover .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+
 /* footer */
 footer {
   height: 90px;
-  background-color: rosybrown;
+  background-color: rgb(40, 40, 40);
 }
 
 /* player musicale */
@@ -318,33 +336,43 @@ footer #player {
   align-items: center;
 }
 
+.player-album,
+.player-controller,
+.player-audio{
+  cursor: pointer;
+}
+
 /* muscia in riproduzione */
 .player-album{
   width: 13%;
-  height: 50px;
+  height: 90px;
   display: flex;
-  background-color: rgba(156,39,176 ,1);
-}
-
-.song-playing img{
-  height: 50px;
+  padding: 5px;
+  align-items: center;
 }
 
 .song-playing{
-  width: 70%;
-  background-color: rgba(215,204,200 ,0.5);
+  width: 95%;
+  display: flex;
+  align-items: center;
+}
+
+.song-playing img{
+  height: 65px;
+}
+
+.song-playing p{
+  font-size: 12px;
 }
 
 .fav-folder{
   width: 30%;
-  background-color: rgba(188,170,164 ,0.5);
 }
 
 /* controlli musicali */
 .player-controller{
   width: 50%;
   height: 70px;
-  background-color: rgba(233,30,99 ,1);
 }
 
 .commands {
@@ -385,7 +413,7 @@ footer #player {
   height: 5px;
   width: 50%;
   position: relative;
-  background: rgb(90, 90, 90);
+  background: rgb(88, 88, 88);
   border-radius: 50px;
 }
 
@@ -400,21 +428,47 @@ footer #player {
 
 /* controlli volume */
 .player-audio{
-  width: 13%;
+  width: 18%;
   height: 50px;
   display: flex;
   align-items: center;
-  background-color: rgba(103,58,183 ,1);
 }
 
 .options {
   width: 40%;
   display: flex;
   justify-content: space-around;
-  background-color: rgba(243,229,245 ,0.5);
+}
+
+.volume-bar{
+  width: 60%;
+}
+
+.volume-bar .meter { 
+  height: 5px;
+  width: 90%;
+  position: relative;
+  background: rgb(88, 88, 88);
+  border-radius: 50px;
 }
 
 /* MEDIA Q */
+/* big */
+@media (min-width: 992px) and (max-width: 1200px){
+  .player-album{
+    width: 17%;
+  }
+
+  .player-album{
+    width: 25%;
+  }
+
+  .player-controller{
+    width: 48%;
+  }
+}
+
+
 
 /* tablet */
 @media (min-width: 768px) and (max-width: 992px){
@@ -424,8 +478,23 @@ footer #player {
     height: 235px;
   }
 
-}
+  .player-album{
+    width: 25%;
+  }
 
+  .player-album{
+    width: 25%;
+  }
+
+  .player-controller{
+    width: 48%;
+  }
+
+  .player-audio{
+    font-size: 12px;
+  }
+
+}
 
 /* smol */
 @media (min-width: 600px) and (max-width: 768px){
@@ -444,6 +513,17 @@ footer #player {
   .covers .albums{
     width: calc(100% / 2);
     padding: 0 5px;
+  }
+
+  .player-album,
+  .player-controller,
+  .player-audio{
+    width: calc(98% / 3);
+    font-size: 12px;
+  }
+
+  .fav-folder {
+    width: 20%;
   }
 }
 
@@ -484,5 +564,20 @@ footer #player {
     width: calc(100% / 2);
     height: fit-content;
     padding: 0 5px;
+  }
+
+  .player-album,
+  .player-controller,
+  .player-audio{
+    width: calc(98% / 3);
+    font-size: 12px;
+  }
+  
+  .fav-folder {
+    width: 8%;
+  }
+
+  .player-audio{
+    font-size: 10px;
   }
 }
