@@ -271,7 +271,13 @@ main #content .call-to-action a{
 }
 
 .albums .author{
+  display: flex;
+  width: 100%;
+}
+
+.albums .author .song-name{
   
+  height: 100%;
 }
 
 /* footer */
@@ -363,7 +369,27 @@ footer #player {
 
 /* media q */
 
+/* tablet */
+@media (min-width: 768px) and (max-width: 992px){
+  .recently-played .albums{
+    width: calc(100% / 4);
+    height: fit-content;
+    padding: 0 5px;
+  }
+}
 
+
+/* smol */
+@media (min-width: 600px) and (max-width: 768px){
+  .recently-played .albums{
+    width: calc(100% / 2);
+    height: fit-content;
+    padding: 0 5px;
+  }
+}
+
+
+/* x-smol */
 @media (max-width: 600px) {
 
   main .main-nav .nav-top .nav-logo-mobile{
@@ -382,7 +408,6 @@ footer #player {
   .recently-played .albums{
     width: calc(100% / 2);
     height: fit-content;
-    background-color: violet;
     padding: 0 5px;
   }
 }
