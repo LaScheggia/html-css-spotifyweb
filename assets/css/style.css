@@ -313,8 +313,6 @@ main #content .call-to-action a{
 
 .albums:hover .overlay{
   position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
   flex-direction: column;
   justify-content:center;
@@ -368,6 +366,17 @@ footer #player {
 .fav-folder{
   width: 30%;
 }
+
+.fav-folder .fa-heart:hover{
+  font-weight: 900;
+  color: rgba(213,0,0 ,1);
+}
+
+.fav-folder .fa-folder:hover{
+  font-weight: 900;
+  color: rgba(255,245,157 ,1);
+}
+
 
 /* controlli musicali */
 .player-controller{
@@ -424,6 +433,11 @@ footer #player {
   background-color: rgb(193, 193, 193);
   position: relative;
   overflow: hidden;
+}
+
+.meter > span:hover{
+  height: 110%;
+  background-color: rgb(173, 255, 47);
 }
 
 /* controlli volume */
