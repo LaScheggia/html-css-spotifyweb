@@ -135,6 +135,11 @@ main .home, .find, .library {
 }
 
 /* playlists */
+.name-playlists{
+  overflow-y: auto;
+  height: 60%;
+}
+
 .name-playlists ul{
   list-style: none;
 }
@@ -160,6 +165,7 @@ main .main-nav .nav-bottom {
   width: 210px;
   position: fixed;
   z-index: 9999;
+  background-color: black;
 }
 
 /* download app */
@@ -237,6 +243,7 @@ main #content .call-to-action a{
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .content .nav-bar ul{
@@ -263,14 +270,18 @@ main #content .call-to-action a{
 
 /* covers */
 .recently-played, .created-for, .popular-arts{
-  background-color: rgba(174,213,129 ,0.7);
   margin-bottom: 30px;
-  height: 365px;
 }
 
 .recently-played h1, 
 .created-for h1,
 .popular-arts h1{
+  margin-bottom: 15px;
+}
+
+.recently-played h6, 
+.created-for h6,
+.popular-arts h6{
   margin-bottom: 15px;
 }
 
@@ -281,7 +292,6 @@ main #content .call-to-action a{
 .covers .albums{
   width: calc(100% / 6);
   height: auto;
-  background-color: violet;
   padding: 0 5px;
   margin-bottom: 10px;
 }
@@ -362,6 +372,12 @@ footer #player {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+}
+
+.music-bar .mins{
+  padding: 0 15px;
+  font-size: 10px;
 }
 
 /* progress bar */
@@ -398,16 +414,10 @@ footer #player {
   background-color: rgba(243,229,245 ,0.5);
 }
 
-/* media q */
+/* MEDIA Q */
 
 /* tablet */
 @media (min-width: 768px) and (max-width: 992px){
-  .recently-played
-  .created-for,
-  .popular-arts{
-    height: 575px;
-  }
-
   .covers .albums{
     width: calc(100% / 4);
     padding: 0 5px;
@@ -431,15 +441,8 @@ footer #player {
     align-content: space-around;
   }
 
-  .recently-played,
-  .created-for,
-  .popular-arts{
-    min-height: 531px;
-  }
-  
   .covers .albums{
     width: calc(100% / 2);
-    min-height: 235px;
     padding: 0 5px;
   }
 }
